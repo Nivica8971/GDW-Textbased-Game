@@ -1,8 +1,6 @@
 #include <iostream>
 #include <math.h>
 #include <time.h>
-#define cardNumber 4
-#define playerCount 2
 using namespace std;
 //data types 0=suit, 1=colour,2=point value
 static int hand[2][4][3]{ };
@@ -14,16 +12,12 @@ static void createCard(int player, int cardNum) {
 		case(0):hand[player][cardNum][k] = (rand() % 6) +1; break;
 		case(1):hand[player][cardNum][k] = (rand() % 8) +1;	break;
 		case(2):hand[player][cardNum][k] = (rand() % 8) +1 ; break;
-
 			//Declares suit to player		
 		}
 	}
 }
 void outputHand(int playerNum,int sizeOfHand) {
 		for (int i=0;i<=sizeOfHand;i++){
-			cout << hand[0][i][0];
-			cout << hand[0][i][1];
-			cout << hand[0][i][2];
 			cout << "player " << playerNum +1 << "'s ";
 			switch (hand[playerNum][i][0]) {
 			case(1): cout << "card " << i + 1 << " is suit shield, "; break;
@@ -169,5 +163,5 @@ int main()
 	
 }
 
-
+//gay
 
