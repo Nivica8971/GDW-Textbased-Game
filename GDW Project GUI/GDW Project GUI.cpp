@@ -15,45 +15,47 @@ static void createCard(int player, int cardNum) {
 		case(1):hand[player][cardNum][k] = (rand() % 8) + 1;
 		case(2):hand[player][cardNum][k] = (rand() % 8) + 1;
 
-			//Declares suit to player
-			
-			switch (hand[player][cardNum][0]) {
-
-			case(1): cout << "card " << cardNum << ": \n is suit square, ";
-			case(2): cout << "card " << cardNum << ": \n is suit square, ";
-			case(3): cout << "card " << cardNum << ": \n is suit square, ";
-			case(4): cout << "card " << cardNum << ": \n is suit square, ";
-			case(5): cout << "card " << cardNum << ": \n is suit square, ";
-			case(6): cout << "card " << cardNum << ": \n is suit square, ";
-
-
-			}
-			//Declares color to player
-			switch (hand[player][cardNum][1]) {
-
-			case(1): cout << "is Blue, ";
-			case(2): cout << "is yellow, ";
-			case(3): cout << "is Pink, ";
-			case(4): cout << "is Red, ";
-			case(5): cout << "is Orange, ";
-			case(6): cout << "is Green, ";
-			case(7): cout << "is indigo, ";
-			case(8): cout << "is Violet, ";
-			}
-			//Declares Point value to player
-			switch (hand[player][cardNum][1]) {
-
-			case(1): cout << "is Blue, ";
-			case(2): cout << "is yellow, ";
-			case(3): cout << "is Pink, ";
-			case(4): cout << "is Red, ";
-			case(5): cout << "is Orange, ";
-			case(6): cout << "is Green, ";
-			case(7): cout << "is indigo, ";
-			case(8): cout << "is Violet, ";
-			}
-			
+			//Declares suit to player		
 		}
+	}
+}
+void outputHand(int playerNum,int sizeOfHand) {
+	cout << hand[playerNum][0][0];
+		for (int i=0;i<=sizeOfHand;i++){
+	switch (hand[playerNum][i][0]) {
+	case(1): cout << "card " << i << " is suit shield, ";
+	case(2): cout << "card " << i << " is suit triagle, ";
+	case(3): cout << "card " << i << " is suit elipse, ";
+	case(4): cout << "card " << i << " is suit hazard, ";
+	case(5): cout << "card " << i << " is suit chevron, ";
+	case(6): cout << "card " << i << " is suit eye, ";
+
+
+	}
+	//Declares color to player
+	switch (hand[playerNum][i][1]) {
+
+	case(1): cout << "is Blue, ";
+	case(2): cout << "is yellow, ";
+	case(3): cout << "is Pink, ";
+	case(4): cout << "is Red, ";
+	case(5): cout << "is Orange, ";
+	case(6): cout << "is Green, ";
+	case(7): cout << "is indigo, ";
+	case(8): cout << "is Violet, ";
+	}
+	//Declares Point value to player
+	switch (hand[playerNum][i][2]) {
+
+	case(1): cout << "is 1 point,  \n";
+	case(2): cout << "is 2 points, \n";
+	case(3): cout << "is 3 points, \n";
+	case(4): cout << "is 4 points, \n ";
+	case(5): cout << "is 5 points, \n";
+	case(6): cout << "is 6 points, \n";
+	case(7): cout << "is 7 points, \n";
+	case(8): cout << "is 8 points, \n";
+	}
 	}
 }
 static int gameStart() {
@@ -120,7 +122,7 @@ int main()
 	if (playGame == 1) {
 
 		gameStart();
-		
+		outputHand(0,4);
 	}
 
 	// While loop that makes sure the player enter 1 or 2; 
