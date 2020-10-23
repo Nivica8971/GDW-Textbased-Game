@@ -14,6 +14,45 @@ static void createCard(int player, int cardNum) {
 		case(0):hand[player][cardNum][k] = (rand() % 6) + 1;
 		case(1):hand[player][cardNum][k] = (rand() % 8) + 1;
 		case(2):hand[player][cardNum][k] = (rand() % 8) + 1;
+
+			//Declares suit to player
+			
+			switch (hand[player][cardNum][0]) {
+
+			case(1): cout << "card " << cardNum << ": \n is suit square, ";
+			case(2): cout << "card " << cardNum << ": \n is suit square, ";
+			case(3): cout << "card " << cardNum << ": \n is suit square, ";
+			case(4): cout << "card " << cardNum << ": \n is suit square, ";
+			case(5): cout << "card " << cardNum << ": \n is suit square, ";
+			case(6): cout << "card " << cardNum << ": \n is suit square, ";
+
+
+			}
+			//Declares color to player
+			switch (hand[player][cardNum][1]) {
+
+			case(1): cout << "is Blue, ";
+			case(2): cout << "is yellow, ";
+			case(3): cout << "is Pink, ";
+			case(4): cout << "is Red, ";
+			case(5): cout << "is Orange, ";
+			case(6): cout << "is Green, ";
+			case(7): cout << "is indigo, ";
+			case(8): cout << "is Violet, ";
+			}
+			//Declares Point value to player
+			switch (hand[player][cardNum][1]) {
+
+			case(1): cout << "is Blue, ";
+			case(2): cout << "is yellow, ";
+			case(3): cout << "is Pink, ";
+			case(4): cout << "is Red, ";
+			case(5): cout << "is Orange, ";
+			case(6): cout << "is Green, ";
+			case(7): cout << "is indigo, ";
+			case(8): cout << "is Violet, ";
+			}
+			
 		}
 	}
 }
@@ -121,7 +160,7 @@ int main()
 		std::cout << "Colors Show!" << std::endl;
 
 	}
-	gameStart();
+	
 }
 
 
